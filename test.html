@@ -8,15 +8,64 @@
   </head>
   <body>
     <script>
-      console.log("hello world");
-      if (0>50){
-          alert("c'est vrai")
-      } else if (52<0){
-          alert("c'est faux")
+      class Article {
+        constructor(produit, reference, prixHT) {
+          this.produit = produit;
+          this.reference = reference;
+          this.prixHT = prixHT;
+          console.log("typeof this => " + typeof this);
+          console.log(this);
+        }
+        calculerPrixTTC() {
+          const TVA = 1.196;
+          return this.prixHT * TVA;
+        }
       }
-      else(0<50)
-          alert("c'est ça")
-          console.log("ça avance")
+
+      let article1 = new Article("Sac à dos", 645020, 35);
+      let article2 = new Article("Skis de rando", 665020, 83);
+      console.log("Prix article 1 => " + article1.calculerPrixTTC());
+      console.log("Prix article 2 => " + article2.calculerPrixTTC());
+
+      class Promo extends Article {
+        constructor(produit, reference, prixHT, remise) {
+          super(produit, reference, prixHT);
+          this.remise = remise;
+        }
+        calculerPrixPromo() {
+          return super.calculerPrixTTC() * this.remise;
+        }
+      }
+      let promo = new Promo("Sac à dos", 645020, 35, 0.8);
+
+      let velo = {};
+
+      velo.marque = "Condor";
+      velo.type = "BMX";
+      velo.reference = 45856552;
+      velo.prixTTC = 399;
+
+      console.log(velo);
+
+      function incrementation(index) {
+        return index + 1;
+      }
+
+      let i = 0;
+      alert(incrementation(i));
+
+      let passagers = [];
+      passagers.push("coco");
+      passagers.push("celine");
+      passagers.push("nathalie");
+      passagers.push("veronica");
+      passagers.push("bella");
+      console.log(passagers);
+
+      for (i = 0; i < passagers.length; i++) {
+        console.log("Passager " + passagers[i] + " monte dans le transport");
+      }
+      console.log("Tous les passagers sont à bord");
     </script>
   </body>
 </html>
