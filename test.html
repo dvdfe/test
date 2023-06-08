@@ -8,64 +8,129 @@
   </head>
   <body>
     <script>
-      class Article {
-        constructor(produit, reference, prixHT) {
-          this.produit = produit;
-          this.reference = reference;
-          this.prixHT = prixHT;
-          console.log("typeof this => " + typeof this);
-          console.log(this);
+      //   class Article {
+      //     constructor(produit, reference, prixHT) {
+      //       this.produit = produit;
+      //       this.reference = reference;
+      //       this.prixHT = prixHT;
+      //       console.log("typeof this => " + typeof this);
+      //       console.log(this);
+      //     }
+      //     calculerPrixTTC() {
+      //       const TVA = 1.196;
+      //       return this.prixHT * TVA;
+      //     }
+      //   }
+
+      //   let article1 = new Article("Sac à dos", 645020, 35);
+      //   let article2 = new Article("Skis de rando", 665020, 83);
+      //   console.log("Prix article 1 => " + article1.calculerPrixTTC());
+      //   console.log("Prix article 2 => " + article2.calculerPrixTTC());
+
+      //   class Promo extends Article {
+      //     constructor(produit, reference, prixHT, remise) {
+      //       super(produit, reference, prixHT);
+      //       this.remise = remise;
+      //     }
+      //     calculerPrixPromo() {
+      //       return super.calculerPrixTTC() * this.remise;
+      //     }
+      //   }
+      //   let promo = new Promo("Sac à dos", 645020, 35, 0.8);
+
+      //   let velo = {};
+
+      //   velo.marque = "Condor";
+      //   velo.type = "BMX";
+      //   velo.reference = 45856552;
+      //   velo.prixTTC = 399;
+
+      //   console.log(velo);
+
+      //   function incrementation(index) {
+      //     return index + 1;
+      //   }
+
+      //   function afficherDeuxValeurs(valeur1, valeur2,){
+      //       console.log("Première valeur "+valeur1)
+      //       console.log("Deuxième valeur "+valeur2)
+      //   }
+
+      //   afficherDeuxValeurs(12,"Bonjour")
+
+      //   let passagers = [];
+      //   passagers.push("coco", "celine", "nathalie", "veronica", "bella" );
+      //   console.log(passagers);
+
+      //   for (i = 0; i < passagers.length; i++) {
+      //     console.log("Passager " + passagers[i] + " monte dans le transport");
+      //   }
+      //   console.log("Tous les passagers sont à bord");
+
+      //   const tauRatings = [5, 4, 5, 5, 1, 2];
+      //   const colinRatings = [5, 5, 5, 4, 5];
+      //   function caculateAverageRating(ratings) {
+      //     if (ratings.length === 0) {
+      //       return 0;
+      //     }
+
+      //     let sum = 0;
+      //     for (let rating of ratings) {
+      //       sum += rating;
+      //     }
+      //     return sum / ratings.length;
+      //   }
+      //   const tauAverage = caculateAverageRating(tauRatings);
+      //   console.log(tauAverage); // Affiche la note moyenne de Tau
+
+      //   const colinAverage = caculateAverageRating(colinRatings);
+      //   console.log(colinAverage); // Affiche la note moyenne de Colin
+
+      const ChildrenAge = [4, 5, 8, 6, 9, 12, 5, 6, 14];
+      ChildrenAge.push(12, 15, 16, 14, 13);
+
+      function averageAge(ages) {
+        let moyenne = 0;
+        for (age of ages) {
+          moyenne += age;
         }
-        calculerPrixTTC() {
-          const TVA = 1.196;
-          return this.prixHT * TVA;
+        return moyenne / ages.length;
+      }
+
+      const ageMoyen = averageAge(ChildrenAge);
+      console.log("L'age moyen des enfants est de: ", ageMoyen);
+
+      class Book {
+        constructor(nom, auteur, editeur, genre, pages) {
+          this.nom = nom;
+          this.auteur = auteur;
+          this.editeur = editeur;
+          this.genre = genre;
+          this.pages = pages;
         }
       }
 
-      let article1 = new Article("Sac à dos", 645020, 35);
-      let article2 = new Article("Skis de rando", 665020, 83);
-      console.log("Prix article 1 => " + article1.calculerPrixTTC());
-      console.log("Prix article 2 => " + article2.calculerPrixTTC());
+      const livre1 = new Book("Dragon", "C.Kelly", "La maison du livre", "Monde animal", 256);
+      const livre2 = new Book("Chien", "C.Kelly", "La maison du livre", "Monde animal", 455);
+      const livre3 = new Book("Chat", "C.Kelly", "La maison du livre", "Monde animal", 318);
+      const livre4 = new Book("Zèbre", "C.Kelly", "La maison du livre", "Monde animal", 362);
+      const livre5 = new Book("Lion", "C.Kelly", "La maison du livre", "Monde animal", 150);
+      const livre6 = new Book("Tigre", "C.Kelly", "La maison du livre", "Monde animal", 362);
 
-      class Promo extends Article {
-        constructor(produit, reference, prixHT, remise) {
-          super(produit, reference, prixHT);
-          this.remise = remise;
-        }
-        calculerPrixPromo() {
-          return super.calculerPrixTTC() * this.remise;
-        }
+      let livres =[]
+      livres.push(livre1,livre2,livre3,livre4,livre5,livre6)
+      console.log(livres)
+
+      function totalPages(livres){
+          let total=0
+          for(read of livres.pages){
+              total += livres.pages
+          }
       }
-      let promo = new Promo("Sac à dos", 645020, 35, 0.8);
+      const pageToRead = totalPages(livres)
 
-      let velo = {};
 
-      velo.marque = "Condor";
-      velo.type = "BMX";
-      velo.reference = 45856552;
-      velo.prixTTC = 399;
-
-      console.log(velo);
-
-      function incrementation(index) {
-        return index + 1;
-      }
-
-      let i = 0;
-      alert(incrementation(i));
-
-      let passagers = [];
-      passagers.push("coco");
-      passagers.push("celine");
-      passagers.push("nathalie");
-      passagers.push("veronica");
-      passagers.push("bella");
-      console.log(passagers);
-
-      for (i = 0; i < passagers.length; i++) {
-        console.log("Passager " + passagers[i] + " monte dans le transport");
-      }
-      console.log("Tous les passagers sont à bord");
+      console.log(pageToRead)
     </script>
   </body>
 </html>
