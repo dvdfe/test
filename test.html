@@ -103,37 +103,96 @@
       //     `Il y a ${nbChildren} élèves et l'âge moyen de la classe est ${ageMoyen}`
       //   );
 
-      //   class Book {
-      //     constructor(nom, auteur, editeur, genre, pages) {
-      //       this.nom = nom;
-      //       this.auteur = auteur;
-      //       this.editeur = editeur;
-      //       this.genre = genre;
-      //       this.pages = pages;
-      //     }
+      class Book {
+        constructor(nom, auteur, editeur, genre, pages) {
+          this.nom = nom;
+          this.auteur = auteur;
+          this.editeur = editeur;
+          this.genre = genre;
+          this.pages = pages;
+        }
+      }
+
+      const livre1 = new Book(
+        "Dragon",
+        "C.Kelly",
+        "La maison du livre",
+        "Monde animal",
+        256
+      );
+      const livre2 = new Book(
+        "Chien",
+        "C.Kelly",
+        "La maison du livre",
+        "Monde animal",
+        455
+      );
+      const livre3 = new Book(
+        "Chat",
+        "C.Kelly",
+        "La maison du livre",
+        "Monde animal",
+        318
+      );
+      const livre4 = new Book(
+        "Zèbre",
+        "C.Kelly",
+        "La maison du livre",
+        "Monde animal",
+        362
+      );
+      const livre5 = new Book(
+        "Lion",
+        "C.Kelly",
+        "La maison du livre",
+        "Monde animal",
+        150
+      );
+      const livre6 = new Book(
+        "Tigre",
+        "C.Kelly",
+        "La maison du livre",
+        "Monde animal",
+        362
+      );
+
+      let livres = [];
+      livres.push(livre1, livre2, livre3, livre4, livre5, livre6);
+      console.log(livres);
+
+      let pagesToRead = livres.reduce((accumulateur, livres) => {
+          return accumulateur + livres.pages
+      },0)
+      console.log(`Il y a ${pagesToRead} pages à lire pour teminer tous les bouqins `)
+
+    //   let pagesToRead = livres.map((element) => {
+    //     return console.log(element.pages);
+    //   });
+
+    //   const bookPages = element.pages;
+    //   console.log(bookPages)
+
+
+    //  function totalPages(){
+    //      let pages = 0
+    //      for ( )
+    //  }
+
+
+
+
+
+      // function totalPages(livres){
+      //     let total=0
+      //     for(read of livres.pages){
+      //         total += livres.pages
+      //       }
       //   }
+      //   console.log("loop", livres.pages)
+      // const pageToRead = totalPages(livres)
 
-      //   const livre1 = new Book("Dragon", "C.Kelly", "La maison du livre", "Monde animal", 256);
-      //   const livre2 = new Book("Chien", "C.Kelly", "La maison du livre", "Monde animal", 455);
-      //   const livre3 = new Book("Chat", "C.Kelly", "La maison du livre", "Monde animal", 318);
-      //   const livre4 = new Book("Zèbre", "C.Kelly", "La maison du livre", "Monde animal", 362);
-      //   const livre5 = new Book("Lion", "C.Kelly", "La maison du livre", "Monde animal", 150);
-      //   const livre6 = new Book("Tigre", "C.Kelly", "La maison du livre", "Monde animal", 362);
+      // console.log(pageToRead)
 
-      //   let livres =[]
-      //   livres.push(livre1,livre2,livre3,livre4,livre5,livre6)
-      //   console.log(livres)
-
-      //   function totalPages(livres){
-      //       let total=0
-      //       for(read of livres.pages){
-      //           total += livres.pages
-      //         }
-      //     }
-      //     console.log("loop", livres.pages)
-      //   const pageToRead = totalPages(livres)
-
-      //   console.log(pageToRead)
       //   class BankAccount {
       //     constructor(owner, balance) {
       //       this.owner = owner;
@@ -186,23 +245,23 @@
       //     console.log(wordArray);
       //     return wordArray.length;
       //   };
-    //   function binarySearch(array, thingToFind, start, end){
-    //       if (start > end){
-    //           return false;
-    //       }
+      //   function binarySearch(array, thingToFind, start, end){
+      //       if (start > end){
+      //           return false;
+      //       }
 
-    //       let mid = Math.floor((start + end) / 2);
-    //       if (array[mid] === thingToFind){
-    //           return true
-    //       }
-    //       if (thingToFind < array[mid]){
-    //           return binarySearch(array, thingToFind, start, mid -1)
-    //       }
-    //       else{
-    //           return binarySearch(array, thingToFind, mid +1, end)
-    //         }
-            
-    //   }
+      //       let mid = Math.floor((start + end) / 2);
+      //       if (array[mid] === thingToFind){
+      //           return true
+      //       }
+      //       if (thingToFind < array[mid]){
+      //           return binarySearch(array, thingToFind, start, mid -1)
+      //       }
+      //       else{
+      //           return binarySearch(array, thingToFind, mid +1, end)
+      //         }
+
+      //   }
     </script>
   </body>
 </html>
