@@ -86,51 +86,123 @@
       //   const colinAverage = caculateAverageRating(colinRatings);
       //   console.log(colinAverage); // Affiche la note moyenne de Colin
 
-      const ChildrenAge = [4, 5, 8, 6, 9, 12, 5, 6, 14];
-      ChildrenAge.push(12, 15, 16, 14, 13);
+      //   const childrenAge = [4, 5, 8, 6, 9, 12, 5, 6, 14];
+      //   childrenAge.push(12, 15, 16, 14, 13);
 
-      function averageAge(ages) {
-        let moyenne = 0;
-        for (age of ages) {
-          moyenne += age;
-        }
-        return moyenne / ages.length;
-      }
+      //   function averageAge(ages) {
+      //     let moyenne = 0;
+      //     for (let age of ages) {
+      //       moyenne += age;
+      //     }
+      //     return moyenne / ages.length;
+      //   }
 
-      const ageMoyen = averageAge(ChildrenAge);
-      console.log("L'age moyen des enfants est de: ", ageMoyen);
+      //   const ageMoyen = averageAge(childrenAge);
+      //   const nbChildren = childrenAge.length;
+      //   console.log(
+      //     `Il y a ${nbChildren} élèves et l'âge moyen de la classe est ${ageMoyen}`
+      //   );
 
-      class Book {
-        constructor(nom, auteur, editeur, genre, pages) {
-          this.nom = nom;
-          this.auteur = auteur;
-          this.editeur = editeur;
-          this.genre = genre;
-          this.pages = pages;
-        }
-      }
+      //   class Book {
+      //     constructor(nom, auteur, editeur, genre, pages) {
+      //       this.nom = nom;
+      //       this.auteur = auteur;
+      //       this.editeur = editeur;
+      //       this.genre = genre;
+      //       this.pages = pages;
+      //     }
+      //   }
 
-      const livre1 = new Book("Dragon", "C.Kelly", "La maison du livre", "Monde animal", 256);
-      const livre2 = new Book("Chien", "C.Kelly", "La maison du livre", "Monde animal", 455);
-      const livre3 = new Book("Chat", "C.Kelly", "La maison du livre", "Monde animal", 318);
-      const livre4 = new Book("Zèbre", "C.Kelly", "La maison du livre", "Monde animal", 362);
-      const livre5 = new Book("Lion", "C.Kelly", "La maison du livre", "Monde animal", 150);
-      const livre6 = new Book("Tigre", "C.Kelly", "La maison du livre", "Monde animal", 362);
+      //   const livre1 = new Book("Dragon", "C.Kelly", "La maison du livre", "Monde animal", 256);
+      //   const livre2 = new Book("Chien", "C.Kelly", "La maison du livre", "Monde animal", 455);
+      //   const livre3 = new Book("Chat", "C.Kelly", "La maison du livre", "Monde animal", 318);
+      //   const livre4 = new Book("Zèbre", "C.Kelly", "La maison du livre", "Monde animal", 362);
+      //   const livre5 = new Book("Lion", "C.Kelly", "La maison du livre", "Monde animal", 150);
+      //   const livre6 = new Book("Tigre", "C.Kelly", "La maison du livre", "Monde animal", 362);
 
-      let livres =[]
-      livres.push(livre1,livre2,livre3,livre4,livre5,livre6)
-      console.log(livres)
+      //   let livres =[]
+      //   livres.push(livre1,livre2,livre3,livre4,livre5,livre6)
+      //   console.log(livres)
 
-      function totalPages(livres){
-          let total=0
-          for(read of livres.pages){
-              total += livres.pages
-          }
-      }
-      const pageToRead = totalPages(livres)
+      //   function totalPages(livres){
+      //       let total=0
+      //       for(read of livres.pages){
+      //           total += livres.pages
+      //         }
+      //     }
+      //     console.log("loop", livres.pages)
+      //   const pageToRead = totalPages(livres)
 
+      //   console.log(pageToRead)
+      //   class BankAccount {
+      //     constructor(owner, balance) {
+      //       this.owner = owner;
+      //       this.balance = balance;
+      //     }
+      //     showBalance() {
+      //       console.log(
+      //         "Le montant du compte de ",
+      //         owner + "est de ",
+      //         balance + "EUR"
+      //       );
+      //     }
+      //     deposit(amount) {
+      //       console.log("Dépôt de " + amount + "EUR");
+      //       this.balance += amount;
+      //       this.showBalance();
+      //     }
+      //     withdraw(amount) {
+      //       if (amount > this.balance) {
+      //         console.log("Retrait refusé, le montant dépasse votre solde");
+      //       } else {
+      //         this.balance -= amount;
+      //         console.log("Vous avez retiré " + amount + "EUR");
+      //         this.showBalance();
+      //     }
+      //     }
+      //   }
 
-      console.log(pageToRead)
+      //   let personnes = ["Clément"];
+      //   personnes.push("léon", "david", "Will", "Mathilde");
+
+      //   console.log(personnes);
+      //   for (let personne of personnes) {
+      //     saluer(personne);
+      //   }
+
+      //   function saluer(prenom) {
+      //     const monPrenom = prenom[0].toUpperCase() + prenom.substr(1);
+      //     const longueurPrenom = monPrenom.length;
+      //     console.log(
+      //       `Bonjour ${monPrenom}, ton prénom contient ${longueurPrenom} lettres`
+      //     );
+      //   }
+
+      //   const stringToTest = "Hello world";
+      //   const getWordCount = () => {
+      //     const wordArray = stringToTest.split("");
+
+      //     console.log("Word array in getWordCount: ");
+      //     console.log(wordArray);
+      //     return wordArray.length;
+      //   };
+    //   function binarySearch(array, thingToFind, start, end){
+    //       if (start > end){
+    //           return false;
+    //       }
+
+    //       let mid = Math.floor((start + end) / 2);
+    //       if (array[mid] === thingToFind){
+    //           return true
+    //       }
+    //       if (thingToFind < array[mid]){
+    //           return binarySearch(array, thingToFind, start, mid -1)
+    //       }
+    //       else{
+    //           return binarySearch(array, thingToFind, mid +1, end)
+    //         }
+            
+    //   }
     </script>
   </body>
 </html>
